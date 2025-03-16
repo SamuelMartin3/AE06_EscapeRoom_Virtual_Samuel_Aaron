@@ -309,7 +309,7 @@ main {
     background-size: cover;
     background-position: center;
     width: 250px;
-    height: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

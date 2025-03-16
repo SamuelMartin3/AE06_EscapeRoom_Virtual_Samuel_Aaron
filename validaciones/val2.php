@@ -1,19 +1,15 @@
-<?php
-session_start(); // Iniciar sesión
 
-if (isset($_POST['gema'])) {
-    $gema = strtolower(trim($_POST['gema']));
-    
-    if ($gema == 'amarillo') {
-        $_SESSION['reto2'] = 'check';
-        header('Location: ../reto3.php');
-        exit();
-    } else {
-        // Si fallas en el reto, quédate en reto2.php con un mensaje de error en la URL
-        if (!isset($_SESSION['reto2'])) {
-            header('Location: ../reto2.php?msg=❌ Respuesta incorrecta. Pista: Recuerda las mezclas de colores.');
-            exit();
-        }
-    }
+<?php
+session_start();
+
+$respuesta = strtolower(trim($_POST['gema']));
+
+if ($respuesta == "amarillo") { // Cambia "amarillo" si la respuesta es diferente
+    $_SESSION['reto2_completado'] = true; // Marcar reto 2 como completado
+    header("Location: ../reto3.php"); // Redirigir al reto 3
+    exit();
+} else {
+    header("Location: ../reto2.php?msg=❌ Respuesta incorrecta. Pista: Mezclado con azul da verde.");
+    exit();
 }
 ?>

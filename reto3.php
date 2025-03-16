@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+if (isset($_SESSION['reto3_completado']) && $_SESSION['reto3_completado'] === true) {
+    header("Location: reto4.php");
+    exit();
+}
+
+// Verificar si completó el Reto 2, si no, redirigir a reto 2
+if (!isset($_SESSION['reto2_completado']) || $_SESSION['reto2_completado'] !== true) {
+    header("Location: reto2.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>

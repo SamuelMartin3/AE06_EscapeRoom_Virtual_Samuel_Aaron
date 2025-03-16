@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Felicidades!</title>
-    <link rel="stylesheet" href="./css/styleReto.css">
+    <link rel="stylesheet" href="./css/stylereto.css">
 </head>
 <body class="body5">
     <h1>🎉 ¡Felicidades, completaste el Escape Room! 🎉</h1>
